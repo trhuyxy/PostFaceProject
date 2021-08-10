@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './App.css';
-import TodoForm from './components/TodoForm'
-import TodoList from './components/TodoList'
+import PostForm from './components/PostForm'
+import PostList from './components/PostList'
 const LOCAL_STOREAGE_KEY = "react-todo-list-todos"
 function App() {
   //Lưu thông tin data
@@ -46,8 +46,8 @@ function App() {
       <h1>
         React Facebook post
       </h1>
-      <TodoForm className="postInformation" addTodo={addTodo} />
-      <TodoList className="postContent" todos={todos} removeTodo={removeTodo} editChange={editChange} editComments={editComments} deleteComments={deleteComments} />
+      <PostForm className="postInformation" addTodo={addTodo} />
+      <PostList className="postContent" todos={todos} removeTodo={removeTodo} editChange={editChange} editComments={editComments} deleteComments={deleteComments} />
     </div>
   );
 }

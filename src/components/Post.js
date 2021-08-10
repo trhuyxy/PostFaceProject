@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import uuid from 'uuid';
-const Todo = ({ todo, removeTodo, editChange, editComments, deleteComments }) => {
+const Post = ({ todo, removeTodo, editChange, editComments, deleteComments }) => {
   const [edit, setEdit] = useState(false)
   const [editContent, setEditContent] = useState(todo.task)
   const [comment, setComment] = useState("")
@@ -95,4 +95,4 @@ const Todo = ({ todo, removeTodo, editChange, editComments, deleteComments }) =>
   );
 }
 
-export default Todo;
+export default Post;
