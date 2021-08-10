@@ -1,38 +1,162 @@
 .App {
   text-align: center;
+  padding: 20px 20px;
+  background-color: #F0F2F5;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button{
+  cursor: pointer;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.postSection{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.postInfor{
+  margin: 30px 0;
+}
+.moveMargin{
+  margin: 0 20px;
+}
+.moveMargin1{
+  margin: 20px 0;
+}
+/* Style cho phan post form */
+.postInfor{
+  border: none;
+  margin: 0px 30%;
+  padding: 10px 0px 20px 0px;
+  border-radius: 10px;
+  background-color: white;
+}
+.postInforInput{
+  margin-bottom: 20px;
+}
+.postInforInput input{
+  width: 80%;
+  padding: 15px 10px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background-color: #E4E6E9;
+  font-size: 15px;
+  text-transform: capitalize;
+  
+}
+.postInforInputBtn{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+.postInforInputBtn button{
+  background-color: #1771E6;
   color: white;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px 5px;
 }
-
-.App-link {
-  color: #61dafb;
+/* Style cho phan section form */
+.moveMargin1{
+  border: none;
+  width: 100%;
+  margin: 30px 30% 0px 30%;
+  padding: 20px;
+  background-color: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.moveMargin1 li{
+  display: flex;
+  justify-content: left;
+}
+.moveMargin p{
+  text-align: left;
+}
+.moveMargin p::first-letter{
+  text-transform: uppercase;
+}
+.moveMargin1 input{
+  display: flex;
+  justify-content: left;
+  width: 80%;
+  margin: 0px 30px;
+  padding: 5px 5px;
+  font-size: 15px;
+}
+.moveMargin1 input::first-letter{
+  text-transform: uppercase;
+}
+.btnGroup{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  margin-top: 20px;
+  border-bottom: 1px solid black;
+}
+.btnGroup button{
+  margin-left: 15px;
+  background-color: #1771E6;
+  color: white;
+  border: none;
+  border-radius: 5px 5px;
+  padding: 10px 10px;
+}
+.btnGroup button:first-child{
+  background-color: #FF0000;
+}
+.commentPost{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.commentPost input{
+  margin: 0;
+  padding: 10px;
+  padding-left: 15px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background-color: #E4E6E9;
+}
+.commentPost button{
+  margin-right: 20px;
+  background-color: #1771E6;
+  color: white;
+  border: none;
+  border-radius: 5px 5px;
+}
+/* Phan comment sectiom */
+.commentSection{
+  border: none;
+  display: flex;
+  margin: 20px 0;
+  border-radius: 20px;
+  background-color: #E4E6E9;
+}
+.commentSection p{
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  padding-left: 10px;
+  text-align: justify;
+}
+.commentSection p::first-letter{
+  text-transform: uppercase;
+}
+.commentSectionBtn{
+  margin-right: 20px;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+.commentSectionBtn button{
+  border: none;
+  background-color: #FF0000;
+  color: white;
+  border-radius: 5px 5px;
+  padding: 5px 5px;
 }
