@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import uuid from 'uuid';
+import { useHistory } from "react-router-dom";
 const TodoForm = ({ addTodo }) => {
+  let history = useHistory();
   const [todo, setTodo] = useState({
     id: "",
     task: "",
@@ -17,6 +19,7 @@ const TodoForm = ({ addTodo }) => {
       addTodo({ ...todo, id: uuid.v4() });
       //reset task input
       setTodo({ ...todo, task: "" });
+      history.push("/");
     }
   }
   return (

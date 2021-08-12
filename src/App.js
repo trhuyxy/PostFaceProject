@@ -2,6 +2,13 @@ import React, { useState, useEffect } from 'react'
 import './App.css';
 import PostForm from './components/PostForm'
 import PostList from './components/PostList'
+import PostDetail from './components/PostDetail';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import PostEdit from './components/PostEdit';
 const LOCAL_STOREAGE_KEY = "react-todo-list-todos"
 function App() {
   //Lưu thông tin data
@@ -42,13 +49,27 @@ function App() {
     setTodos([...todos])
   }
   return (
-    <div className="App">
-      <h1>
-        React Facebook post
-      </h1>
-      <PostForm className="postInformation" addTodo={addTodo} />
-      <PostList className="postContent" todos={todos} removeTodo={removeTodo} editChange={editChange} editComments={editComments} deleteComments={deleteComments} />
-    </div>
+    <Router>
+      <div className="App">
+        <h1>
+          React Facebook post
+        </h1>
+        <Switch>
+          <Route exact path="/">
+            <PostList className="postContent" todos={todos} removeTodo={removeTodo} editChange={editChange} editComments={editComments} deleteComments={deleteComments} />
+          </Route>
+          <Route path="/addpost">
+            <PostForm className="postInformation" addTodo={addTodo} />
+          </Route>
+          <Route path="/postdetail/:id">
+            <PostDetail />
+          </Route>
+          <Route path="/postedit/:id">
+            <PostEdit editChange={editChange}/>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
