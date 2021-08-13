@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
-const Post = ({ todo, removeTodo, editChange, editComments, deleteComments }) => {
-  // const [edit, setEdit] = useState(false)
-  // const [editContent, setEditContent] = useState(todo.task)
+const Post = ({ todo, removeTodo, editComments, deleteComments }) => {
   const [comment, setComment] = useState("")
   const [comments, setComments] = useState(todo.comments)
   useEffect(() => {
@@ -13,17 +11,6 @@ const Post = ({ todo, removeTodo, editChange, editComments, deleteComments }) =>
       removeTodo(todo.id)
     }
   }
-  // function handleEditContextChange(e) {
-  //   setEditContent(e.target.value)
-  // }
-  // function handCancelEdit() {
-  //   setEditContent(todo.task)
-  //   setEdit(false)
-  // }
-  // function handleEditChange() {
-  //   editChange({ text: editContent, a: todo.id })
-  //   setEdit(false)
-  // }
   function handleSubmitComment(e) {
     e.preventDefault();
     if (comment.trim()) {
@@ -45,10 +32,10 @@ const Post = ({ todo, removeTodo, editChange, editComments, deleteComments }) =>
             </p>
           </li>
           <div className="btnGroup">
-            <button onClick={handleRemoveClick}>Xóa bài</button>
+            <button class="deleteBtn" onClick={handleRemoveClick}>Xóa bài</button>
             <Link to={{pathname: `/postdetail/${todo.id}`, state: [{id: todo.id, task: todo.task}]}}>
-              <button type="button">
-                Detail
+              <button class="submitBtn" type="button">
+               Chi tiết
               </button>
             </Link>
           </div>

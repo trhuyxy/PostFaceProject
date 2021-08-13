@@ -10,11 +10,11 @@ const PostDetail = () => {
   return (
     <div>
       <h2>Chi tiết bài post</h2>
-      <p>{location.state[0].task}</p>
+      <p className="detailContent">{location.state[0].task}</p>
       <div>
-        <button onClick={handleGoBack}>Quay lại</button>
+        <button class="deleteBtn" onClick={handleGoBack}>Quay lại</button>
         <Link to={{ pathname: `/postedit/${location.state[0].id}`, state: [{ id: location.state[0].id, task: location.state[0].task }] }}>
-          <button type="button">
+          <button class="submitBtn" type="button">
             Sửa bài
           </button>
         </Link>

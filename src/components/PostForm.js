@@ -22,6 +22,9 @@ const TodoForm = ({ addTodo }) => {
       history.push("/");
     }
   }
+  function handleCancel(){
+    history.goBack()
+  }
   return (
     <form className="postInfor" onSubmit={handleSubmit}>
       <h3>Nơi đăng bài</h3>
@@ -30,6 +33,7 @@ const TodoForm = ({ addTodo }) => {
       </div>
       <div className="postInforInputBtn">
         <button type="submit">Đăng bài</button>
+        <button onClick={handleCancel}>Huỷ</button>
       </div>
     </form>
   );

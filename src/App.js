@@ -3,6 +3,7 @@ import './App.css';
 import PostForm from './components/PostForm'
 import PostList from './components/PostList'
 import PostDetail from './components/PostDetail';
+import { PostContext } from './contexts/PostContext';
 import {
   BrowserRouter as Router,
   Switch,
@@ -54,20 +55,22 @@ function App() {
         <h1>
           React Facebook post
         </h1>
-        <Switch>
-          <Route exact path="/">
-            <PostList className="postContent" todos={todos} removeTodo={removeTodo} editChange={editChange} editComments={editComments} deleteComments={deleteComments} />
-          </Route>
-          <Route path="/addpost">
-            <PostForm className="postInformation" addTodo={addTodo} />
-          </Route>
-          <Route path="/postdetail/:id">
-            <PostDetail />
-          </Route>
-          <Route path="/postedit/:id">
-            <PostEdit editChange={editChange}/>
-          </Route>
-        </Switch>
+        <PostContext.Provider value={todos}>
+          <Switch>
+            <Route exact path="/">
+              <PostList className="postContent" removeTodo={removeTodo} editChange={editChange} editComments={editComments} deleteComments={deleteComments} />
+            </Route>
+            <Route path="/addpost">
+              <PostForm className="postInformation" addTodo={addTodo} />
+            </Route>
+            <Route path="/postdetail/:id">
+              <PostDetail />
+            </Route>
+            <Route path="/postedit/:id">
+              <PostEdit editChange={editChange} />
+            </Route>
+          </Switch>
+        </PostContext.Provider>
       </div>
     </Router>
   );

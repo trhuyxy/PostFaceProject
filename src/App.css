@@ -53,11 +53,15 @@ ul{
   padding-right: 40px;
 }
 .postInforInputBtn button{
-  background-color: #1771E6;
+  background-color: #FF0000;
   color: white;
   border: none;
   padding: 10px 10px;
   border-radius: 5px 5px;
+  margin-left: 15px;
+}
+.postInforInputBtn button:first-child{
+  background-color: #1771E6;
 }
 /* Style cho phan section form */
 .moveMargin1{
@@ -96,7 +100,15 @@ ul{
   margin-top: 20px;
   border-bottom: 1px solid black;
 }
-.btnGroup button{
+.deleteBtn{
+  margin-left: 15px;
+  background-color: #FF0000;
+  color: white;
+  border: none;
+  border-radius: 5px 5px;
+  padding: 10px 10px;
+}
+.submitBtn{
   margin-left: 15px;
   background-color: #1771E6;
   color: white;
@@ -104,9 +116,7 @@ ul{
   border-radius: 5px 5px;
   padding: 10px 10px;
 }
-.btnGroup button:first-child{
-  background-color: #FF0000;
-}
+
 .commentPost{
   display: flex;
   flex-direction: row;
@@ -159,4 +169,26 @@ ul{
   color: white;
   border-radius: 5px 5px;
   padding: 5px 5px;
+}
+
+.addPostBtn{
+  margin-left: 15px;
+  background-color: #1771E6;
+  color: white;
+  border: none;
+  border-radius: 5px 5px;
+  padding: 10px 10px;
+}
+
+.detailContent{
+  text-align: left ;
+}
+.editBtnGroup{
+  margin-top: 20px;
+}
+.editInput{
+  width: 100%;
+  padding: 10px 5px;
+  border-radius: 5px 5px;
+  outline: none;
 }
