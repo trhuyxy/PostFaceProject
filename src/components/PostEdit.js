@@ -21,7 +21,7 @@ const PostEdit = ({ editChange }) => {
       <input className="editInput" type="text" name="post" onChange={handleEditContextChange} value={editContent} />
       <div className="editBtnGroup">
         <button class="deleteBtn" onClick={handleGoBack}>Hủy</button>
-        <button class="submitBtn" onClick={handleEditChange}>Đăng bài</button>
+        <button class="submitBtn" onClick={handleEditChange}>Đăng</button>
       </div>
     </div>
 
