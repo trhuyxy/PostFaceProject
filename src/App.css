@@ -183,6 +183,9 @@ ul{
 .detailContent{
   text-align: left ;
 }
+.detailContent::first-letter{
+  text-transform: uppercase;
+}
 .editBtnGroup{
   margin-top: 20px;
 }
@@ -191,4 +194,7 @@ ul{
   padding: 10px 5px;
   border-radius: 5px 5px;
   outline: none;
+}
+.editInput::first-letter{
+  text-transform: uppercase;
 }
